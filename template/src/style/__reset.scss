@@ -1,0 +1,29 @@
+html {
+  height: 100%;
+  font-family: 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+}
+
+body {
+  height: 100%;
+}
+
+iframe {
+  border: none;
+}
+
+div,
+p,
+ul,
+li {
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
