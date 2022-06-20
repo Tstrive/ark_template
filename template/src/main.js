@@ -17,16 +17,13 @@ let instance = null
 let router = null
 let newRoute = []
 function render(props) {
-  const { container, pubPath, setExampke, pageMsg } = props
+  const { container, pubPath, setExampke } = props
   Vue.prototype.$publicPath = pubPath ? pubPath : ''
   Vue.use(VueRouter)
   if (props.pubPath) {
     newRoute = handleRoute(routes, props)
   } else {
     newRoute = routes
-  }
-  if (pageMsg) {
-    window.hsja_activePageData = pageMsg
   }
   router = new VueRouter({
     base: window.__POWERED_BY_QIANKUN__ ? `/${props.pubPath}` : '/',
@@ -70,7 +67,10 @@ export async function bootstrap() {
 }
 export async function mount(props) {
   console.log('[vue] props from main framework', props)
-  const { container } = props
+  const { container, pageMsg } = props
+  if (pageMsg) {
+    window.hsja_activePageData = pageMsg
+  }
   if (instance === null) {
     render(props)
   } else {
