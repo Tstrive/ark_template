@@ -1,1 +1,1 @@
-VUE_APP_BASE_URL='/xxx'
+VUE_APP_BASE_URL='/<%= options.path %>'
