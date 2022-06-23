@@ -18,7 +18,7 @@ module.exports = (api, options, rootOptions) => {
       'vue-router': '^3.5.1',
       vuex: '^3.6.2',
       'element-ui': '^2.15.8',
-      hsja_ark: '1.0.0',
+      hsja_ark: '^1.0.0',
     },
     devDependencies: {
       '@babel/core': '^7.12.16',
