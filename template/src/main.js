@@ -34,7 +34,9 @@ function render(props) {
     router.beforeEach((to, from, next) => {
       if (!to.path.includes(pubPath)) {
         next({
-          path: pubPath + (to.path == '/' ? '' : to.path),
+          ...to,
+          path: pubPath + to.path,
+          fullPath: pubPath + to.fullPath,
         })
       } else {
         next()
