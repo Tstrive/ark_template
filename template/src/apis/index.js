@@ -1,4 +1,4 @@
-import request from './service'
+import request from './http'
 
 export function getDataInfo(data) {
   return request({
